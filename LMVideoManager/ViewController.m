@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "LMVideoViewController.h"
 
 @interface ViewController ()
 
@@ -23,13 +24,18 @@
     btn.frame = CGRectMake(100, 100, 100, 44);
     [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
+    btn.layer.cornerRadius = 10;
+    btn.layer.borderWidth = 1;
+    btn.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    btn.clipsToBounds = YES;
     [self.view addSubview:btn];
     
 }
 
 -(void)btnAction:(UIButton *)btn {
     
-    
+    LMVideoViewController *vc = [[LMVideoViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {

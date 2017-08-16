@@ -6,10 +6,15 @@
 //  Copyright © 2017年 ghostlord. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+#import "GPUImageBeautifyFilter.h"
+#import "GPUImage.h"
+
 typedef NS_ENUM(NSUInteger, LMVideoManagerCameraType) {
-    LMVideoManagerCameraTypeFront = 1,
+    LMVideoManagerCameraTypeFront = 0,
     LMVideoManagerCameraTypeBack,
 };
+
 
 @protocol LMVideoManagerProtocol <NSObject>
 
@@ -27,8 +32,7 @@ typedef NS_ENUM(NSUInteger, LMVideoManagerCameraType) {
 
 @end
 
-#import "GPUImageBeautifyFilter.h"
-#import <Foundation/Foundation.h>
+
 
 @interface LMVideoManager : NSObject
 

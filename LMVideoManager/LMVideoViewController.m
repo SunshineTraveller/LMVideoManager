@@ -54,7 +54,7 @@
     UIButton *stop = [UIButton buttonWithType:UIButtonTypeCustom];
     stop.backgroundColor = [UIColor redColor];
     [stop setTitle:@"停止录制" forState:UIControlStateNormal];
-    [stop setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [stop setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     stop.frame = CGRectMake(LMWID/2, 64, LMWID/2, 44);
     [stop addTarget:self action:@selector(endRecording) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:stop];
